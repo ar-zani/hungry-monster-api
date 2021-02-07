@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Hungry Monster</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar py-4 navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand w-50" href="#"><img src="images/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto fw-bold">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Recipes</a>
+                        <a class="nav-link" href="">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container p-4">
+        <!--input field for searching-->
+        <div class="d-flex justify-content-center">
+            <input id="user-input" class="form-control w-auto border-danger rounded-0" type="search"
+                placeholder="Search" aria-label="Search">
+            <button onclick="searchItem()" class="btn btn-danger rounded-0" type="submit">Search</button>
+        </div>
+
+        <div id="row" class="row mt-2 g-5 text-center"></div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-edit">
+                    <div class="modal-image position-relative">
+                        <img id="details-image" class="w-100">
+                        <button type="button" class="btn-close bg-danger rounded-circle p-2 position-absolute top-0 end-0 mt-1 me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-header">
+                        <h2 id="details-title" class="modal-title mx-2" id="exampleModalLabel"></h2>
+                    </div>
+                    <div class="modal-body">   
+                        <h4 class="mx-2">Ingredients</h4>  
+                        <ul id="ingredient-list" class="list-unstyled mx-3">
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <p>powered by <a class="text-decoration-none link-warning fw-bold" href="https://www.themealdb.com">Hungry Monster</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

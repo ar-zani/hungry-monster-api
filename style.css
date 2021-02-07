@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #E5E5E5;
+}
+
+
+/* ============================ */
+        /* PAGE CSS */
+/* ============================ */
+#row .card{
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#row .custom-card-body{
+    background-color: #F8F7F5;
+}
+#details-image{
+    border-radius: 10px;
+}
+.modal-edit{
+    border-radius: 10px;
+}
